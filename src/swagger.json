@@ -8,12 +8,48 @@
     "paths": {
         "localhost:8181/account": {
             "delete": {
-                "description": "",
+                "description": "Deleta uma conta de usuario",
                 "parameters": [
                     {
                         "description": "",
                         "in": "header",
                         "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Usuário",
+                        "in": "body",
+                        "name": "username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Nome completo",
+                        "in": "body",
+                        "name": "fullName",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Senha",
+                        "in": "body",
+                        "name": "password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -34,9 +70,9 @@
                 "description": "",
                 "parameters": [
                     {
-                        "description": "",
+                        "description": "Authorization header",
                         "in": "header",
-                        "name": "Content-Type",
+                        "name": "Authorization",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -60,6 +96,42 @@
                         "description": "",
                         "in": "header",
                         "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Usuário",
+                        "in": "body",
+                        "name": "username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Nome completo",
+                        "in": "body",
+                        "name": "fullName",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Senha",
+                        "in": "body",
+                        "name": "password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -89,6 +161,33 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "description": "Id do bloco",
+                        "in": "body",
+                        "name": "blockId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Titúlo do bloco",
+                        "in": "body",
+                        "name": "blockTitle",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
@@ -102,6 +201,17 @@
                 ]
             },
             "get": {
+                "parameters": [
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+				],
                 "responses": {
                     "200": {
                         "description": "successful operation"
@@ -119,6 +229,42 @@
                         "description": "",
                         "in": "header",
                         "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Id do bloco",
+                        "in": "body",
+                        "name": "blockId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Titúlo do bloco",
+                        "in": "body",
+                        "name": "blockTitle",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Descrição do bloco",
+                        "in": "body",
+                        "name": "blockDescription",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -148,6 +294,33 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "description": "Usuário",
+                        "in": "body",
+                        "name": "username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Nome completo",
+                        "in": "body",
+                        "name": "fullName",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Senha",
+                        "in": "body",
+                        "name": "password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
@@ -161,6 +334,49 @@
                 ]
             }
         },
+        "localhost:8181/signin": {
+            "post": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Usuário",
+                        "in": "body",
+                        "name": "username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Senha",
+                        "in": "body",
+                        "name": "password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Signin",
+                "tags": [
+                    "Account"
+                ]
+            }
+        },
         "localhost:8181/texts": {
             "put": {
                 "description": "",
@@ -169,6 +385,33 @@
                         "description": "",
                         "in": "header",
                         "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Id do texto",
+                        "in": "body",
+                        "name": "textId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Conteúdo do texto",
+                        "in": "body",
+                        "name": "textBody",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Authorization header",
+                        "in": "header",
+                        "name": "Authorization",
                         "required": true,
                         "schema": {
                             "type": "string"
