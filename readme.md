@@ -29,7 +29,7 @@ $ node build/src/server.js
 
 ## ☕ Usando IdeaBlocks
 
-Basta acessar: ```[localhost:8181/documentation](https://localhost:8181/documentation)```
+Basta acessar: [localhost:8181/documentation](https://localhost:8181/documentation)
 Lá vai conter todas as rotas disponíveis para a utilização.
 
 O uso entendido do backend é o seguinte:
