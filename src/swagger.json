@@ -1,0 +1,209 @@
+{
+    "info": {
+        "description": "Create notepads for your amazing ideas!",
+        "title": "Ideablocks",
+        "version": "1.0.0"
+    },
+    "openapi": "3.0.0",
+    "paths": {
+        "localhost:8181/account": {
+            "delete": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Delete account",
+                "tags": [
+                    "Account"
+                ]
+            },
+            "get": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Account",
+                "tags": [
+                    "Account"
+                ]
+            },
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Change password",
+                "tags": [
+                    "Account"
+                ]
+            }
+        },
+        "localhost:8181/blocks": {
+            "delete": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Delete Ideablock",
+                "tags": [
+                    "Ideablock"
+                ]
+            },
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "View Ideablocks",
+                "tags": [
+                    "Ideablock"
+                ]
+            },
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Rename Ideablock",
+                "tags": [
+                    "Ideablock"
+                ]
+            }
+        },
+        "localhost:8181/signup": {
+            "post": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Signup",
+                "tags": [
+                    "Account"
+                ]
+            }
+        },
+        "localhost:8181/texts": {
+            "put": {
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "header",
+                        "name": "Content-Type",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "summary": "Edit ideaBlockText",
+                "tags": [
+                    "IdeablockText"
+                ]
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8181/"
+        }
+    ],
+    "tags": [
+        {
+            "description": "",
+            "name": "Account"
+        },
+        {
+            "description": "",
+            "name": "Ideablock"
+        },
+        {
+            "description": "",
+            "name": "IdeablockText"
+        }
+    ]
+}
